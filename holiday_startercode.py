@@ -110,7 +110,7 @@ class HolidayList:
         # Check to see if name and date of holiday is in innerHolidays array
         # Add non-duplicates to innerHolidays
         # Handle any exceptions.     
-          startyear = 2022
+          startyear = 2020
           while startyear <= 2024:
                r = requests.get(f"https://www.timeanddate.com/holidays/us/{startyear}")
                h = r.text    
@@ -254,11 +254,9 @@ def main():
 
      location = "holidays.json"
      hl.read_json(location)
-     print(hl.numHolidays())
     
 
      hl.scrapeHolidays()
-     print(hl.numHolidays())
 
 
      print("Holiday Management")
